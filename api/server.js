@@ -17,6 +17,7 @@ const wss = createWebSocketServer(server);
 wss.on("connection", (ws) => {
   // Creating new id for user
   const userId = uuidv4();
+  ws.userId = userId;
 
   // Handle all receive massage
   handleReceivedMessage(ws, userId);

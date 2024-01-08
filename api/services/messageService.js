@@ -1,7 +1,12 @@
 const { getWebSocketServer } = require("../websocketServer");
 const WebSocket = require("ws");
 const { checkForUsername, addUser } = require("./userService");
-
+/*
+  TODO
+  * Logout
+  * Send Message to global chat
+  * DM to user
+*/
 function handleReceivedMessage(ws, userId) {
   const invalidMessage = {
     type: "error",
